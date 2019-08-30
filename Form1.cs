@@ -157,7 +157,7 @@ namespace Lancares
             {
                 Panel3Update(Game);
             }
-            else if (Game.RatingQueue.Count == 0 && Game.CurrentRound == Game.RoundsCount)
+            else if (Game.RatingQueue.Count == 0 && Game.CurrentRound == Game.PlayersCount)
             {
                 Game.SwitchPhase(PhaseName.Summary);
                 Panel3Update(Game);
@@ -206,7 +206,7 @@ namespace Lancares
                 scoreValuesLabel.Text = Game.ScoreValues();
                 scorePanel.Visible = true;
                 timer1.Enabled = false;
-                
+
             }
             
 
@@ -237,9 +237,6 @@ namespace Lancares
             }
         }
 
-        private void Label4_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
